@@ -9,7 +9,7 @@
 
 ## 👾 Pacman Contribution Graph
 
-![Pacman](https://raw.githubusercontent.com/Paranubhav-20/Paranubhav-20/output/pacman-contribution-graph.svg)
+![Pacman Dark](https://raw.githubusercontent.com/Paranubhav-20/Paranubhav-20/output/pacman-contribution-graph.svg)
 
 
 # 📊 GitHub Stats:
