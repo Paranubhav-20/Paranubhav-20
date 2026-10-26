@@ -62,57 +62,65 @@
     </linearGradient>
 
     <linearGradient id="border-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.08" />
-      <stop offset="45%" stop-color="#2563EB" stop-opacity="0.1" />
-      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.45" />
-      <stop offset="55%" stop-color="#2563EB" stop-opacity="0.1" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.08" />
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.06" />
+      <stop offset="45%" stop-color="#2563EB" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.55" />
+      <stop offset="55%" stop-color="#2563EB" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.06" />
       <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="10s" repeatCount="indefinite" />
     </linearGradient>
 
     <linearGradient id="panel-surface" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.94" />
-      <stop offset="100%" stop-color="#F1F5F9" stop-opacity="0.98" />
+      <stop offset="0%" stop-color="#F8FAFC" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#F1F5F9" stop-opacity="0.94" />
     </linearGradient>
 
     <linearGradient id="glass-sheen" x1="0%" y1="0%" x2="60%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.65" />
-      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.015" />
       <stop offset="35.1%" stop-color="#FFFFFF" stop-opacity="0" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
     <linearGradient id="scanline-beam" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#06B6D4" stop-opacity="0" />
-      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.09" />
-      <stop offset="95%" stop-color="#2563EB" stop-opacity="0.18" />
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.16" />
+      <stop offset="95%" stop-color="#2563EB" stop-opacity="0.32" />
       <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
     </linearGradient>
 
-    <radialGradient id="orb-blue" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.10" />
-      <stop offset="60%" stop-color="#2563EB" stop-opacity="0.03" />
+    <radialGradient id="orb-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#2563EB" stop-opacity="0.06" />
       <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
     </radialGradient>
 
     <radialGradient id="orb-cyan" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.10" />
-      <stop offset="60%" stop-color="#06B6D4" stop-opacity="0.03" />
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#06B6D4" stop-opacity="0.05" />
       <stop offset="100%" stop-color="#06B6D4" stop-opacity="0" />
     </radialGradient>
 
     <radialGradient id="orb-emerald" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.08" />
-      <stop offset="60%" stop-color="#10B981" stop-opacity="0.02" />
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.15" />
+      <stop offset="60%" stop-color="#10B981" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
     </radialGradient>
 
+    <filter id="cyber-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
     <filter id="panel-shadow" x="-10%" y="-10%" width="120%" height="125%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.07" />
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.10" />
     </filter>
 
     <pattern id="cyber-grid" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="14" cy="14" r="1" fill="#0F172A" fill-opacity="0.07" />
+      <circle cx="14" cy="14" r="1" fill="#0F172A" fill-opacity="0.1" />
     </pattern>
 
     <pattern id="crt-lines" width="4" height="4" patternUnits="userSpaceOnUse">
@@ -136,7 +144,8 @@
   <g clip-path="url(#canvas-clip)">
     <rect width="1180" height="610" fill="#FFFFFF" />
 
-    <circle cx="240" cy="200" r="320" fill="url(#orb-blue)">
+    <!-- Ambient Floating Orbs -->
+    <circle cx="240" cy="200" r="320" fill="url(#orb-purple)">
       <animate attributeName="cx" values="240;310;210;240" dur="14s" repeatCount="indefinite" />
       <animate attributeName="cy" values="200;290;170;200" dur="14s" repeatCount="indefinite" />
     </circle>
@@ -153,17 +162,21 @@
 
     <!-- Ambient Particles -->
     <g fill="#06B6D4">
-      <circle cx="120" cy="520" r="1.8" opacity="0.35">
+      <circle cx="120" cy="520" r="1.8" opacity="0.5">
         <animate attributeName="cy" values="520;80;520" dur="19s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.1;0.45;0.1" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.1;0.7;0.1" dur="5s" repeatCount="indefinite" />
       </circle>
-      <circle cx="445" cy="480" r="1.4" opacity="0.3">
+      <circle cx="445" cy="480" r="1.4" opacity="0.4">
         <animate attributeName="cy" values="480;60;480" dur="15s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.15;0.5;0.15" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
       </circle>
-      <circle cx="780" cy="550" r="2" opacity="0.3">
+      <circle cx="780" cy="550" r="2" opacity="0.4">
         <animate attributeName="cy" values="550;90;550" dur="22s" repeatCount="indefinite" />
-        <animate attributeName="opacity" values="0.1;0.45;0.1" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.1;0.6;0.1" dur="6s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="1090" cy="490" r="1.5" opacity="0.6">
+        <animate attributeName="cy" values="490;110;490" dur="17s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.75;0.2" dur="4.5s" repeatCount="indefinite" />
       </circle>
     </g>
 
@@ -177,8 +190,8 @@
         <animate attributeName="r" values="185;215;185" dur="6s" repeatCount="indefinite" />
       </circle>
 
-      <rect x="28" y="28" width="430" height="40" fill="#F1F5F9" />
-      <line x1="28" y1="68" x2="458" y2="68" stroke="#0F172A" stroke-opacity="0.08" stroke-width="1" />
+      <rect x="28" y="28" width="430" height="40" fill="#F1F5F9" fill-opacity="0.85" />
+      <line x1="28" y1="68" x2="458" y2="68" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1" />
 
       <circle cx="52" cy="48" r="5.5" fill="#EF4444" fill-opacity="0.85" />
       <circle cx="70" cy="48" r="5.5" fill="#F59E0B" fill-opacity="0.85" />
@@ -194,7 +207,7 @@
       <!-- Floating ASCII Mesh -->
       <g>
         <animateTransform attributeName="transform" type="translate" values="0,-4; 0,5; 0,-4" dur="5.5s" repeatCount="indefinite" />
-        <g class="mono ascii-row" fill="url(#ascii-grad)" text-anchor="middle">
+        <g class="mono ascii-row" fill="url(#ascii-grad)" text-anchor="middle" filter="url(#cyber-glow)">
           <text x="243" y="96" opacity="0">              ..::::------::::..              <animate attributeName="opacity" values="0;1" begin="0.10s" dur="0.08s" fill="freeze" /></text>
           <text x="243" y="108" opacity="0">          .::--==++********++==--::.          <animate attributeName="opacity" values="0;1" begin="0.18s" dur="0.08s" fill="freeze" /></text>
           <text x="243" y="120" opacity="0">        .:-=+*#%%@@@@@@@@@@@@%%#*+=-:.        <animate attributeName="opacity" values="0;1" begin="0.26s" dur="0.08s" fill="freeze" /></text>
@@ -255,8 +268,8 @@
     </g>
 
     <g clip-path="url(#right-panel-clip)">
-      <rect x="482" y="28" width="670" height="40" fill="#F1F5F9" />
-      <line x1="482" y1="68" x2="1152" y2="68" stroke="#0F172A" stroke-opacity="0.08" stroke-width="1" />
+      <rect x="482" y="28" width="670" height="40" fill="#F1F5F9" fill-opacity="0.85" />
+      <line x1="482" y1="68" x2="1152" y2="68" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1" />
 
       <circle cx="506" cy="48" r="5.5" fill="#EF4444" fill-opacity="0.85" />
       <circle cx="524" cy="48" r="5.5" fill="#F59E0B" fill-opacity="0.85" />
@@ -267,7 +280,7 @@
 
       <g transform="translate(520, 114)">
         <text x="0" y="0" fill="#475569" class="mono" font-size="14" font-weight="500">Hi 👋, I'm</text>
-        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6">Paranubhav Dash</text>
+        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)">   Paranubhav Dash</text>
       </g>
 
       <!-- Animated Roles -->
@@ -276,10 +289,10 @@
         <text x="538" y="182" fill="#06B6D4" class="mono" font-size="18" font-weight="700">~</text>
 
         <g clip-path="url(#type-clip-1)">
-          <text x="556" y="182" fill="#2563EB" class="mono" font-size="18" font-weight="600">Frontend Engineer</text>
+          <text x="556" y="182" fill="#2563EB" class="mono" font-size="18" font-weight="600">Data Analyst</text>
         </g>
         <g clip-path="url(#type-clip-2)">
-          <text x="556" y="182" fill="#0284C7" class="mono" font-size="18" font-weight="600">Full Stack Developer</text>
+          <text x="556" y="182" fill="#06B6D4" class="mono" font-size="18" font-weight="600">Frontend Engineer</text>
         </g>
         <g clip-path="url(#type-clip-3)">
           <text x="556" y="182" fill="#059669" class="mono" font-size="18" font-weight="600">Open Source Contributor</text>
@@ -300,7 +313,7 @@
         </rect>
       </g>
 
-      <line x1="520" y1="204" x2="1114" y2="204" stroke="#0F172A" stroke-opacity="0.08" stroke-width="1" />
+      <line x1="520" y1="204" x2="1114" y2="204" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1" />
 
       <!-- Metadata -->
       <g class="mono" font-size="13">
@@ -309,39 +322,39 @@
           <text x="0" y="0" fill="#2563EB" font-weight="600">01</text>
           <text x="28" y="0" fill="#475569">Location</text>
           <text x="155" y="0" fill="#94A3B8">::</text>
-          <text x="180" y="0" fill="#0F172A" font-weight="600">Bengaluru, India</text>
+          <text x="180" y="0" fill="#0F172A" font-weight="500">Bengaluru, India</text>
         </g>
         <g transform="translate(520, 258)" opacity="0">
           <animate attributeName="opacity" values="0;1" begin="0.8s" dur="0.5s" fill="freeze" />
           <text x="0" y="0" fill="#06B6D4" font-weight="600">02</text>
           <text x="28" y="0" fill="#475569">Education</text>
           <text x="155" y="0" fill="#94A3B8">::</text>
-          <text x="180" y="0" fill="#0F172A" font-weight="600">Computer Science &amp; Data Engineering</text>
+          <text x="180" y="0" fill="#0F172A" font-weight="500">Computer Science &amp; Engineering</text>
         </g>
         <g transform="translate(520, 284)" opacity="0">
           <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze" />
           <text x="0" y="0" fill="#10B981" font-weight="600">03</text>
           <text x="28" y="0" fill="#475569">Current Focus</text>
           <text x="155" y="0" fill="#94A3B8">::</text>
-          <text x="180" y="0" fill="#0F172A" font-weight="600">Full-Stack Systems, Analytics &amp; GenAI</text>
+          <text x="180" y="0" fill="#0F172A" font-weight="500">Full-Stack Systems, Analytics &amp; GenAI</text>
         </g>
         <g transform="translate(520, 310)" opacity="0">
           <animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.5s" fill="freeze" />
           <text x="0" y="0" fill="#2563EB" font-weight="600">04</text>
           <text x="28" y="0" fill="#475569">Portfolio</text>
           <text x="155" y="0" fill="#94A3B8">::</text>
-          <text x="180" y="0" fill="#2563EB" font-weight="600">github.com/Paranubhav-20</text>
+          <text x="180" y="0" fill="#2563EB" font-weight="500">github.com/Paranubhav-20</text>
         </g>
         <g transform="translate(520, 336)" opacity="0">
           <animate attributeName="opacity" values="0;1" begin="2.0s" dur="0.5s" fill="freeze" />
           <text x="0" y="0" fill="#06B6D4" font-weight="600">05</text>
           <text x="28" y="0" fill="#475569">Email</text>
           <text x="155" y="0" fill="#94A3B8">::</text>
-          <text x="180" y="0" fill="#0F172A" font-weight="600">dashparanubhav26@gmail.com</text>
+          <text x="180" y="0" fill="#0F172A" font-weight="500">dashparanubhav26@gmail.com</text>
         </g>
       </g>
 
-      <line x1="520" y1="358" x2="1114" y2="358" stroke="#0F172A" stroke-opacity="0.08" stroke-width="1" />
+      <line x1="520" y1="358" x2="1114" y2="358" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1" />
 
       <!-- Skill Pills -->
       <g transform="translate(520, 382)" opacity="0">
@@ -390,7 +403,7 @@
           <g class="pill" transform="translate(96, 0)">
             <rect width="86" height="30" rx="8" class="pill-bg" />
             <circle cx="16" cy="15" r="3" fill="#0284C7" />
-            <text x="49" y="19" text-anchor="middle" class="pill-text">Docker</text>
+            <text x="49" y="19" text-anchor="middle" class="pill-text">Jupyter</text>
           </g>
           <g class="pill" transform="translate(192, 0)">
             <rect width="98" height="30" rx="8" class="pill-bg" />
@@ -400,7 +413,7 @@
           <g class="pill" transform="translate(300, 0)">
             <rect width="72" height="30" rx="8" class="pill-bg" />
             <circle cx="16" cy="15" r="3" fill="#D97706" />
-            <text x="42" y="19" text-anchor="middle" class="pill-text">AWS</text>
+            <text x="42" y="19" text-anchor="middle" class="pill-text">SQL</text>
           </g>
           <g class="pill" transform="translate(382, 0)">
             <rect width="82" height="30" rx="8" class="pill-bg" />
@@ -415,7 +428,7 @@
         </g>
       </g>
 
-      <line x1="520" y1="490" x2="1114" y2="490" stroke="#0F172A" stroke-opacity="0.08" stroke-width="1" />
+      <line x1="520" y1="490" x2="1114" y2="490" stroke="#0F172A" stroke-opacity="0.07" stroke-width="1" />
 
       <!-- Socials -->
       <g transform="translate(520, 512)" opacity="0">
@@ -423,24 +436,24 @@
         <g class="social-btn" transform="translate(0, 0)">
           <rect width="136" height="36" rx="10" class="social-bg" />
           <path d="M18 10C13.58 10 10 13.58 10 18C10 21.54 12.29 24.53 15.47 25.59C15.87 25.66 16.02 25.42 16.02 25.21C16.02 25.02 16.01 24.39 16.01 23.72C13.78 24.21 13.31 22.78 13.31 22.78C12.95 21.86 12.42 21.62 12.42 21.62C11.7 21.12 12.48 21.13 12.48 21.13C13.28 21.19 13.7 21.95 13.7 21.95C14.41 23.17 15.57 22.82 16.04 22.61C16.11 22.09 16.32 21.74 16.55 21.54C14.77 21.34 12.9 20.65 12.9 17.58C12.9 16.7 13.21 15.99 13.72 15.43C13.64 15.23 13.36 14.41 13.8 13.31C13.8 13.31 14.47 13.1 16 14.13C16.64 13.95 17.32 13.86 18 13.86C18.68 13.86 19.36 13.95 20 14.13C21.53 13.1 22.2 13.31 22.2 13.31C22.64 14.41 22.36 15.23 22.28 15.43C22.79 15.99 23.1 16.7 23.1 17.58C23.1 20.66 21.23 21.34 19.44 21.54C19.73 21.79 19.99 22.28 19.99 23.03C19.99 24.11 19.98 24.98 19.98 25.21C19.98 25.42 20.13 25.67 20.53 25.59C23.71 24.53 26 21.54 26 18C26 13.58 22.42 10 18 10Z" fill="#2563EB" />
-          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="600">GitHub</text>
+          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="500">GitHub</text>
         </g>
         <g class="social-btn" transform="translate(150, 0)">
           <rect width="142" height="36" rx="10" class="social-bg" />
           <path d="M13.6 15.2H16.4V24H13.6V15.2ZM15 10.8C15.9 10.8 16.6 11.5 16.6 12.4C16.6 13.3 15.9 14 15 14C14.1 14 13.4 13.3 13.4 12.4C13.4 11.5 14.1 10.8 15 10.8ZM18.2 15.2H20.9V16.4C21.3 15.7 22.2 15 23.6 15C26.4 15 27 16.8 27 19.3V24H24.2V19.8C24.2 18.8 24.2 17.5 22.8 17.5C21.3 17.5 21.1 18.6 21.1 19.7V24H18.2V15.2Z" fill="#06B6D4" />
-          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="600">LinkedIn</text>
+          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="500">LinkedIn</text>
         </g>
         <g class="social-btn" transform="translate(306, 0)">
           <rect width="136" height="36" rx="10" class="social-bg" />
           <path d="M21.8 11.5H24.1L19.1 17.2L25 25H20.4L16.8 20.3L12.6 25H10.3L15.7 18.9L10 11.5H14.7L18 15.8L21.8 11.5ZM21 23.6H22.3L14.1 12.8H12.7L21 23.6Z" fill="#10B981" />
-          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="600">Twitter</text>
+          <text x="36" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="500">Twitter</text>
         </g>
         <g class="social-btn" transform="translate(456, 0)">
           <rect width="138" height="36" rx="10" class="social-bg" />
           <circle cx="18" cy="18" r="7" stroke="#2563EB" stroke-width="1.6" fill="none" />
           <ellipse cx="18" cy="18" rx="3.2" ry="7" stroke="#2563EB" stroke-width="1.3" fill="none" />
           <line x1="11" y1="18" x2="25" y2="18" stroke="#2563EB" stroke-width="1.3" />
-          <text x="34" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="600">Portfolio</text>
+          <text x="34" y="22.5" fill="#0F172A" class="mono" font-size="12" font-weight="500">Portfolio</text>
         </g>
       </g>
 
