@@ -1,8 +1,8 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Paranubhav-20/Paranubhav-20/main/dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Paranubhav-20/Paranubhav-20/main/light.svg" />
-    <img alt="Paranubhav Dash — Developer Terminal Banner" src="https://raw.githubusercontent.com/Paranubhav-20/Paranubhav-20/main/dark.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="./dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./light.svg" />
+    <img alt="Paranubhav Dash — Developer Terminal Banner" src="./dark.svg" width="100%" />
   </picture>
 </div>
 
