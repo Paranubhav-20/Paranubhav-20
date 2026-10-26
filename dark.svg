@@ -1,0 +1,466 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 610" width="100%" height="100%">
+  <defs>
+    <clipPath id="canvas-clip">
+      <rect width="1180" height="610" rx="24" ry="24" />
+    </clipPath>
+    <clipPath id="left-panel-clip">
+      <rect x="28" y="28" width="430" height="554" rx="18" ry="18" />
+    </clipPath>
+    <clipPath id="right-panel-clip">
+      <rect x="482" y="28" width="670" height="554" rx="18" ry="18" />
+    </clipPath>
+
+    <!-- Typing Clips for Dark Terminal -->
+    <clipPath id="type-clip-1">
+      <rect x="556" y="160" height="32" width="0">
+        <animate attributeName="width" values="0;190;190;0;0" keyTimes="0;0.08;0.16;0.19;1" dur="15s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-2">
+      <rect x="556" y="160" height="32" width="0">
+        <animate attributeName="width" values="0;0;234;234;0;0" keyTimes="0;0.20;0.28;0.36;0.39;1" dur="15s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-3">
+      <rect x="556" y="160" height="32" width="0">
+        <animate attributeName="width" values="0;0;276;276;0;0" keyTimes="0;0.40;0.48;0.56;0.59;1" dur="15s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-4">
+      <rect x="556" y="160" height="32" width="0">
+        <animate attributeName="width" values="0;0;135;135;0;0" keyTimes="0;0.60;0.68;0.76;0.79;1" dur="15s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+    <clipPath id="type-clip-5">
+      <rect x="556" y="160" height="32" width="0">
+        <animate attributeName="width" values="0;0;158;158;0;0" keyTimes="0;0.80;0.88;0.96;0.99;1" dur="15s" repeatCount="indefinite" calcMode="discrete" />
+      </rect>
+    </clipPath>
+
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED">
+        <animate attributeName="stop-color" values="#7C3AED;#22D3EE;#10B981;#7C3AED" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#22D3EE">
+        <animate attributeName="stop-color" values="#22D3EE;#10B981;#7C3AED;#22D3EE" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#10B981">
+        <animate attributeName="stop-color" values="#10B981;#7C3AED;#22D3EE;#10B981" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="ascii-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE">
+        <animate attributeName="stop-color" values="#22D3EE;#A855F7;#10B981;#22D3EE" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="55%" stop-color="#7C3AED">
+        <animate attributeName="stop-color" values="#7C3AED;#22D3EE;#A855F7;#7C3AED" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#10B981">
+        <animate attributeName="stop-color" values="#10B981;#7C3AED;#22D3EE;#10B981" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="border-shimmer" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06" />
+      <stop offset="45%" stop-color="#22D3EE" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.55" />
+      <stop offset="55%" stop-color="#7C3AED" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06" />
+      <animateTransform attributeName="gradientTransform" type="rotate" from="0 0.5 0.5" to="360 0.5 0.5" dur="10s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <linearGradient id="panel-surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.88" />
+      <stop offset="100%" stop-color="#090F1E" stop-opacity="0.94" />
+    </linearGradient>
+
+    <linearGradient id="glass-sheen" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.015" />
+      <stop offset="35.1%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <linearGradient id="scanline-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0" />
+      <stop offset="50%" stop-color="#22D3EE" stop-opacity="0.16" />
+      <stop offset="95%" stop-color="#7C3AED" stop-opacity="0.32" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0" />
+    </linearGradient>
+
+    <radialGradient id="orb-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#7C3AED" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orb-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#22D3EE" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="orb-emerald" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.15" />
+      <stop offset="60%" stop-color="#10B981" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0" />
+    </radialGradient>
+
+    <filter id="cyber-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="panel-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.65" />
+    </filter>
+
+    <pattern id="cyber-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="1" fill="#94A3B8" fill-opacity="0.1" />
+    </pattern>
+
+    <pattern id="crt-lines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.5" fill="#030712" fill-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <style>
+    .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .ascii-row { font-size: 9.2px; font-weight: 700; letter-spacing: 1.15px; white-space: pre; }
+    .pill { cursor: pointer; transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1); }
+    .pill-bg { fill: #0F172A; fill-opacity: 0.85; stroke: rgba(255,255,255,0.1); stroke-width: 1; transition: all 0.25s ease; }
+    .pill:hover .pill-bg { stroke: #22D3EE; stroke-width: 1.5; fill: #1E293B; }
+    .pill-text { fill: #F8FAFC; font-size: 12.5px; font-weight: 500; }
+    .pill:hover .pill-text { fill: #22D3EE; }
+    .social-bg { fill: #0F172A; stroke: rgba(255,255,255,0.09); stroke-width: 1; transition: all 0.25s ease; }
+    .social-btn:hover .social-bg { stroke: #7C3AED; fill: #1E293B; }
+  </style>
+
+  <g clip-path="url(#canvas-clip)">
+    <rect width="1180" height="610" fill="#030712" />
+
+    <!-- Ambient Floating Orbs -->
+    <circle cx="240" cy="200" r="320" fill="url(#orb-purple)">
+      <animate attributeName="cx" values="240;310;210;240" dur="14s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="200;290;170;200" dur="14s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="880" cy="180" r="340" fill="url(#orb-cyan)">
+      <animate attributeName="cx" values="880;790;920;880" dur="18s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="180;260;140;180" dur="18s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="640" cy="490" r="300" fill="url(#orb-emerald)">
+      <animate attributeName="cx" values="640;720;580;640" dur="16s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="490;420;520;490" dur="16s" repeatCount="indefinite" />
+    </circle>
+
+    <rect width="1180" height="610" fill="url(#cyber-grid)" />
+
+    <!-- Ambient Particles -->
+    <g fill="#22D3EE">
+      <circle cx="120" cy="520" r="1.8" opacity="0.5">
+        <animate attributeName="cy" values="520;80;520" dur="19s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.1;0.7;0.1" dur="5s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="445" cy="480" r="1.4" opacity="0.4">
+        <animate attributeName="cy" values="480;60;480" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="780" cy="550" r="2" opacity="0.4">
+        <animate attributeName="cy" values="550;90;550" dur="22s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.1;0.6;0.1" dur="6s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="1090" cy="490" r="1.5" opacity="0.6">
+        <animate attributeName="cy" values="490;110;490" dur="17s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.2;0.75;0.2" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- LEFT SECTION: CYBER ASCII PORTRAIT (38%) -->
+    <g filter="url(#panel-shadow)">
+      <rect x="28" y="28" width="430" height="554" rx="18" ry="18" fill="url(#panel-surface)" />
+    </g>
+
+    <g clip-path="url(#left-panel-clip)">
+      <circle cx="243" cy="310" r="195" fill="url(#orb-cyan)">
+        <animate attributeName="r" values="185;215;185" dur="6s" repeatCount="indefinite" />
+      </circle>
+
+      <rect x="28" y="28" width="430" height="40" fill="#090D16" fill-opacity="0.85" />
+      <line x1="28" y1="68" x2="458" y2="68" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+      <circle cx="52" cy="48" r="5.5" fill="#EF4444" fill-opacity="0.85" />
+      <circle cx="70" cy="48" r="5.5" fill="#F59E0B" fill-opacity="0.85" />
+      <circle cx="88" cy="48" r="5.5" fill="#10B981" fill-opacity="0.85" />
+
+      <text x="243" y="52" text-anchor="middle" fill="#94A3B8" class="mono" font-size="11.5" font-weight="500">identity://paranubhav.ascii</text>
+
+      <circle cx="422" cy="48" r="4" fill="#10B981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="410" y="51.5" text-anchor="end" fill="#10B981" class="mono" font-size="9.5" font-weight="600">SYNC</text>
+
+      <!-- Floating ASCII Mesh -->
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0,-4; 0,5; 0,-4" dur="5.5s" repeatCount="indefinite" />
+        <g class="mono ascii-row" fill="url(#ascii-grad)" text-anchor="middle" filter="url(#cyber-glow)">
+          <text x="243" y="96" opacity="0">              ..::::------::::..              <animate attributeName="opacity" values="0;1" begin="0.10s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="108" opacity="0">          .::--==++********++==--::.          <animate attributeName="opacity" values="0;1" begin="0.18s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="120" opacity="0">        .:-=+*#%%@@@@@@@@@@@@%%#*+=-:.        <animate attributeName="opacity" values="0;1" begin="0.26s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="132" opacity="0">       :-+*#%@@@@@@@@@@@@@@@@@@@@%#*+-:       <animate attributeName="opacity" values="0;1" begin="0.34s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="144" opacity="0">      -=*#%@@@@@@@@@@@@@@@@@@@@@@@@%#*=-      <animate attributeName="opacity" values="0;1" begin="0.42s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="156" opacity="0">     .=*#@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*=.     <animate attributeName="opacity" values="0;1" begin="0.50s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="168" opacity="0">     :+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%+:     <animate attributeName="opacity" values="0;1" begin="0.58s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="180" opacity="0">     -*@@@@@@@@@@@@%%####%%@@@@@@@@@@@#*-     <animate attributeName="opacity" values="0;1" begin="0.66s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="192" opacity="0">     -*@@@@@@@%#*+==------==+*#%@@@@@@#*-     <animate attributeName="opacity" values="0;1" begin="0.74s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="204" opacity="0">     :+@@@@%#+=-::..........::-+#%@@@@%+:     <animate attributeName="opacity" values="0;1" begin="0.82s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="216" opacity="0">     .=@@@%*=:..:=+*#####*+=:..:=*%@@@*=.     <animate attributeName="opacity" values="0;1" begin="0.90s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="228" opacity="0">      -@@@#-. .=%@@@@%::%@@@@%=. .-#@@@-      <animate attributeName="opacity" values="0;1" begin="0.98s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="240" opacity="0">     .:#@@+.  .*@(O)@#..#@(O)@*.  .+@@#:.     <animate attributeName="opacity" values="0;1" begin="1.06s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="252" opacity="0">     :+#@%=   .:=+**+-..-+**+=:.   =%@#+:     <animate attributeName="opacity" values="0;1" begin="1.14s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="264" opacity="0">     :+%@#-.      ...::::...      .-#@%+:     <animate attributeName="opacity" values="0;1" begin="1.22s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="276" opacity="0">      :+#*-       ..:-==-:..       -*#+:      <animate attributeName="opacity" values="0;1" begin="1.30s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="288" opacity="0">       :--.       .:=+**+=:.       .--:       <animate attributeName="opacity" values="0;1" begin="1.38s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="300" opacity="0">        ..      .:=*#%@@%#*+=:.      ..        <animate attributeName="opacity" values="0;1" begin="1.46s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="312" opacity="0">        ..     .-+#%@@@@@@%#+-:     ..        <animate attributeName="opacity" values="0;1" begin="1.54s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="324" opacity="0">        .:.    .:=+=[::::]=+=:.    .:.        <animate attributeName="opacity" values="0;1" begin="1.62s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="336" opacity="0">         :-:     ..:-+%%+-:..     :-:         <animate attributeName="opacity" values="0;1" begin="1.70s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="348" opacity="0">          :+=:.    ..:##:..    .:=+:          <animate attributeName="opacity" values="0;1" begin="1.78s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="360" opacity="0">           .-+*+=-::..::..::-=+*+-.           <animate attributeName="opacity" values="0;1" begin="1.86s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="372" opacity="0">             .:-+*##%%%%%%##*+-:.             <animate attributeName="opacity" values="0;1" begin="1.94s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="384" opacity="0">             ..::--==++++==--::..             <animate attributeName="opacity" values="0;1" begin="2.02s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="396" opacity="0">           .:-=+#%+.      .+%#+=-:.           <animate attributeName="opacity" values="0;1" begin="2.10s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="408" opacity="0">        .:-=*#%@@@#:      :#@@@%#*=-:.        <animate attributeName="opacity" values="0;1" begin="2.18s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="420" opacity="0">     .:-=*#%@@@@@@@*:.  .:*@@@@@@@%#*=-:.     <animate attributeName="opacity" values="0;1" begin="2.26s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="432" opacity="0">  .:-=*#%@@@@@@@@@@@#-..-#@@@@@@@@@@@%#*=-:.  <animate attributeName="opacity" values="0;1" begin="2.34s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="444" opacity="0">.-+*#%@@@@@@@@@@@@@@@+::+@@@@@@@@@@@@@@@%#*+-.<animate attributeName="opacity" values="0;1" begin="2.42s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="456" opacity="0">+%@@@@@@@@@@@@@@@@@@@#::#@@@@@@@@@@@@@@@@@@@%+ <animate attributeName="opacity" values="0;1" begin="2.50s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="468" opacity="0">#@@@@@@@@@@@@@@@@@@@@%::%@@@@@@@@@@@@@@@@@@@@# <animate attributeName="opacity" values="0;1" begin="2.58s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="480" opacity="0">%@@@@@@@@@@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@% <animate attributeName="opacity" values="0;1" begin="2.66s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="492" opacity="0">@@@@@@@@@@@@@@@@@@@@@@##@@@@@@@@@@@@@@@@@@@@@@ <animate attributeName="opacity" values="0;1" begin="2.74s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="504" opacity="0">@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@ <animate attributeName="opacity" values="0;1" begin="2.82s" dur="0.08s" fill="freeze" /></text>
+          <text x="243" y="516" opacity="0">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ <animate attributeName="opacity" values="0;1" begin="2.90s" dur="0.08s" fill="freeze" /></text>
+        </g>
+        <g transform="translate(48, 548)">
+          <text x="0" y="0" fill="#22D3EE" class="mono" font-size="11" font-weight="600">&gt; render_mesh --target="paranubhav" --status=OK</text>
+          <rect x="336" y="-10" width="7" height="13" fill="#22D3EE">
+            <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite" calcMode="discrete" />
+          </rect>
+        </g>
+      </g>
+
+      <rect x="28" y="68" width="430" height="514" fill="url(#crt-lines)" pointer-events="none" />
+      <rect x="28" y="-60" width="430" height="55" fill="url(#scanline-beam)" pointer-events="none">
+        <animate attributeName="y" values="28;582;28" dur="7s" repeatCount="indefinite" />
+      </rect>
+      <rect x="28" y="28" width="430" height="554" fill="url(#glass-sheen)" pointer-events="none" />
+    </g>
+
+    <rect x="28" y="28" width="430" height="554" rx="18" ry="18" fill="none" stroke="url(#border-shimmer)" stroke-width="1.5" />
+
+    <!-- RIGHT SECTION: DEVELOPER TERMINAL (62%) -->
+    <g filter="url(#panel-shadow)">
+      <rect x="482" y="28" width="670" height="554" rx="18" ry="18" fill="url(#panel-surface)" />
+    </g>
+
+    <g clip-path="url(#right-panel-clip)">
+      <rect x="482" y="28" width="670" height="40" fill="#090D16" fill-opacity="0.85" />
+      <line x1="482" y1="68" x2="1152" y2="68" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+      <circle cx="506" cy="48" r="5.5" fill="#EF4444" fill-opacity="0.85" />
+      <circle cx="524" cy="48" r="5.5" fill="#F59E0B" fill-opacity="0.85" />
+      <circle cx="542" cy="48" r="5.5" fill="#10B981" fill-opacity="0.85" />
+
+      <text x="817" y="52" text-anchor="middle" fill="#94A3B8" class="mono" font-size="11.5" font-weight="500">paranubhav@macbook-pro: ~/workspace/profile — zsh</text>
+      <text x="1128" y="52" text-anchor="end" fill="#64748B" class="mono" font-size="10.5">UTF-8</text>
+
+      <g transform="translate(520, 114)">
+        <text x="0" y="0" fill="#94A3B8" class="mono" font-size="14" font-weight="500">Hi 👋, I'm</text>
+        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)">Paranubhav Dash</text>
+      </g>
+
+      <!-- Animated Roles -->
+      <g>
+        <text x="520" y="182" fill="#7C3AED" class="mono" font-size="18" font-weight="700">❯</text>
+        <text x="538" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="700">~</text>
+
+        <g clip-path="url(#type-clip-1)">
+          <text x="556" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="600">Frontend Engineer</text>
+        </g>
+        <g clip-path="url(#type-clip-2)">
+          <text x="556" y="182" fill="#A855F7" class="mono" font-size="18" font-weight="600">Full Stack Developer</text>
+        </g>
+        <g clip-path="url(#type-clip-3)">
+          <text x="556" y="182" fill="#10B981" class="mono" font-size="18" font-weight="600">Open Source Contributor</text>
+        </g>
+        <g clip-path="url(#type-clip-4)">
+          <text x="556" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="600">UI Engineer</text>
+        </g>
+        <g clip-path="url(#type-clip-5)">
+          <text x="556" y="182" fill="#7C3AED" class="mono" font-size="18" font-weight="600">AI Enthusiast</text>
+        </g>
+
+        <rect y="165" width="9" height="20" fill="#22D3EE">
+          <animate attributeName="x"
+            values="556;746;746;556;556;790;790;556;556;832;832;556;556;691;691;556;556;714;714;556"
+            keyTimes="0;0.08;0.16;0.19;0.20;0.28;0.36;0.39;0.40;0.48;0.56;0.59;0.60;0.68;0.76;0.79;0.80;0.88;0.96;1"
+            dur="15s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="1;0;1" dur="0.75s" repeatCount="indefinite" calcMode="discrete" />
+        </rect>
+      </g>
+
+      <line x1="520" y1="204" x2="1114" y2="204" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+      <!-- Metadata -->
+      <g class="mono" font-size="13">
+        <g transform="translate(520, 232)" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="0.4s" dur="0.5s" fill="freeze" />
+          <text x="0" y="0" fill="#7C3AED" font-weight="600">01</text>
+          <text x="28" y="0" fill="#94A3B8">Location</text>
+          <text x="155" y="0" fill="#64748B">::</text>
+          <text x="180" y="0" fill="#F8FAFC" font-weight="500">Bengaluru, India</text>
+        </g>
+        <g transform="translate(520, 258)" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="0.8s" dur="0.5s" fill="freeze" />
+          <text x="0" y="0" fill="#22D3EE" font-weight="600">02</text>
+          <text x="28" y="0" fill="#94A3B8">Education</text>
+          <text x="155" y="0" fill="#64748B">::</text>
+          <text x="180" y="0" fill="#F8FAFC" font-weight="500">Computer Science &amp; Data Engineering</text>
+        </g>
+        <g transform="translate(520, 284)" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze" />
+          <text x="0" y="0" fill="#10B981" font-weight="600">03</text>
+          <text x="28" y="0" fill="#94A3B8">Current Focus</text>
+          <text x="155" y="0" fill="#64748B">::</text>
+          <text x="180" y="0" fill="#F8FAFC" font-weight="500">Full-Stack Systems, Analytics &amp; GenAI</text>
+        </g>
+        <g transform="translate(520, 310)" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="1.6s" dur="0.5s" fill="freeze" />
+          <text x="0" y="0" fill="#7C3AED" font-weight="600">04</text>
+          <text x="28" y="0" fill="#94A3B8">Portfolio</text>
+          <text x="155" y="0" fill="#64748B">::</text>
+          <text x="180" y="0" fill="#22D3EE" font-weight="500">github.com/Paranubhav-20</text>
+        </g>
+        <g transform="translate(520, 336)" opacity="0">
+          <animate attributeName="opacity" values="0;1" begin="2.0s" dur="0.5s" fill="freeze" />
+          <text x="0" y="0" fill="#22D3EE" font-weight="600">05</text>
+          <text x="28" y="0" fill="#94A3B8">Email</text>
+          <text x="155" y="0" fill="#64748B">::</text>
+          <text x="180" y="0" fill="#F8FAFC" font-weight="500">dashparanubhav26@gmail.com</text>
+        </g>
+      </g>
+
+      <line x1="520" y1="358" x2="1114" y2="358" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+      <!-- Skill Pills -->
+      <g transform="translate(520, 382)" opacity="0">
+        <animate attributeName="opacity" values="0;1" begin="2.3s" dur="0.6s" fill="freeze" />
+        <text x="0" y="0" fill="#94A3B8" class="mono" font-size="11.5" font-weight="600" letter-spacing="1.2">TECH_STACK //</text>
+
+        <g transform="translate(0, 14)" class="mono">
+          <g class="pill" transform="translate(0, 0)">
+            <rect width="78" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#22D3EE" />
+            <text x="45" y="19" text-anchor="middle" class="pill-text">React</text>
+          </g>
+          <g class="pill" transform="translate(88, 0)">
+            <rect width="92" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#F8FAFC" />
+            <text x="52" y="19" text-anchor="middle" class="pill-text">Next.js</text>
+          </g>
+          <g class="pill" transform="translate(190, 0)">
+            <rect width="92" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#10B981" />
+            <text x="52" y="19" text-anchor="middle" class="pill-text">Node.js</text>
+          </g>
+          <g class="pill" transform="translate(292, 0)">
+            <rect width="114" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#3B82F6" />
+            <text x="63" y="19" text-anchor="middle" class="pill-text">TypeScript</text>
+          </g>
+          <g class="pill" transform="translate(416, 0)">
+            <rect width="98" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#06B6D4" />
+            <text x="55" y="19" text-anchor="middle" class="pill-text">Tailwind</text>
+          </g>
+          <g class="pill" transform="translate(524, 0)">
+            <rect width="70" height="30" rx="8" class="pill-bg" />
+            <circle cx="15" cy="15" r="3" fill="#F97316" />
+            <text x="41" y="19" text-anchor="middle" class="pill-text">Git</text>
+          </g>
+        </g>
+
+        <g transform="translate(0, 54)" class="mono">
+          <g class="pill" transform="translate(0, 0)">
+            <rect width="86" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#EAB308" />
+            <text x="49" y="19" text-anchor="middle" class="pill-text">Python</text>
+          </g>
+          <g class="pill" transform="translate(96, 0)">
+            <rect width="86" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#38BDF8" />
+            <text x="49" y="19" text-anchor="middle" class="pill-text">Docker</text>
+          </g>
+          <g class="pill" transform="translate(192, 0)">
+            <rect width="98" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#818CF8" />
+            <text x="55" y="19" text-anchor="middle" class="pill-text">Postgres</text>
+          </g>
+          <g class="pill" transform="translate(300, 0)">
+            <rect width="72" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#F59E0B" />
+            <text x="42" y="19" text-anchor="middle" class="pill-text">AWS</text>
+          </g>
+          <g class="pill" transform="translate(382, 0)">
+            <rect width="82" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#EC4899" />
+            <text x="47" y="19" text-anchor="middle" class="pill-text">Figma</text>
+          </g>
+          <g class="pill" transform="translate(474, 0)">
+            <rect width="120" height="30" rx="8" class="pill-bg" />
+            <circle cx="16" cy="15" r="3" fill="#10B981" />
+            <text x="66" y="19" text-anchor="middle" class="pill-text">SQL &amp; GenAI</text>
+          </g>
+        </g>
+      </g>
+
+      <line x1="520" y1="490" x2="1114" y2="490" stroke="#FFFFFF" stroke-opacity="0.07" stroke-width="1" />
+
+      <!-- Socials -->
+      <g transform="translate(520, 512)" opacity="0">
+        <animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.6s" fill="freeze" />
+        <g class="social-btn" transform="translate(0, 0)">
+          <rect width="136" height="36" rx="10" class="social-bg" />
+          <path d="M18 10C13.58 10 10 13.58 10 18C10 21.54 12.29 24.53 15.47 25.59C15.87 25.66 16.02 25.42 16.02 25.21C16.02 25.02 16.01 24.39 16.01 23.72C13.78 24.21 13.31 22.78 13.31 22.78C12.95 21.86 12.42 21.62 12.42 21.62C11.7 21.12 12.48 21.13 12.48 21.13C13.28 21.19 13.7 21.95 13.7 21.95C14.41 23.17 15.57 22.82 16.04 22.61C16.11 22.09 16.32 21.74 16.55 21.54C14.77 21.34 12.9 20.65 12.9 17.58C12.9 16.7 13.21 15.99 13.72 15.43C13.64 15.23 13.36 14.41 13.8 13.31C13.8 13.31 14.47 13.1 16 14.13C16.64 13.95 17.32 13.86 18 13.86C18.68 13.86 19.36 13.95 20 14.13C21.53 13.1 22.2 13.31 22.2 13.31C22.64 14.41 22.36 15.23 22.28 15.43C22.79 15.99 23.1 16.7 23.1 17.58C23.1 20.66 21.23 21.34 19.44 21.54C19.73 21.79 19.99 22.28 19.99 23.03C19.99 24.11 19.98 24.98 19.98 25.21C19.98 25.42 20.13 25.67 20.53 25.59C23.71 24.53 26 21.54 26 18C26 13.58 22.42 10 18 10Z" fill="#22D3EE" />
+          <text x="36" y="22.5" fill="#F8FAFC" class="mono" font-size="12" font-weight="500">GitHub</text>
+        </g>
+        <g class="social-btn" transform="translate(150, 0)">
+          <rect width="142" height="36" rx="10" class="social-bg" />
+          <path d="M13.6 15.2H16.4V24H13.6V15.2ZM15 10.8C15.9 10.8 16.6 11.5 16.6 12.4C16.6 13.3 15.9 14 15 14C14.1 14 13.4 13.3 13.4 12.4C13.4 11.5 14.1 10.8 15 10.8ZM18.2 15.2H20.9V16.4C21.3 15.7 22.2 15 23.6 15C26.4 15 27 16.8 27 19.3V24H24.2V19.8C24.2 18.8 24.2 17.5 22.8 17.5C21.3 17.5 21.1 18.6 21.1 19.7V24H18.2V15.2Z" fill="#7C3AED" />
+          <text x="36" y="22.5" fill="#F8FAFC" class="mono" font-size="12" font-weight="500">LinkedIn</text>
+        </g>
+        <g class="social-btn" transform="translate(306, 0)">
+          <rect width="136" height="36" rx="10" class="social-bg" />
+          <path d="M21.8 11.5H24.1L19.1 17.2L25 25H20.4L16.8 20.3L12.6 25H10.3L15.7 18.9L10 11.5H14.7L18 15.8L21.8 11.5ZM21 23.6H22.3L14.1 12.8H12.7L21 23.6Z" fill="#10B981" />
+          <text x="36" y="22.5" fill="#F8FAFC" class="mono" font-size="12" font-weight="500">Twitter</text>
+        </g>
+        <g class="social-btn" transform="translate(456, 0)">
+          <rect width="138" height="36" rx="10" class="social-bg" />
+          <circle cx="18" cy="18" r="7" stroke="#22D3EE" stroke-width="1.6" fill="none" />
+          <ellipse cx="18" cy="18" rx="3.2" ry="7" stroke="#22D3EE" stroke-width="1.3" fill="none" />
+          <line x1="11" y1="18" x2="25" y2="18" stroke="#22D3EE" stroke-width="1.3" />
+          <text x="34" y="22.5" fill="#F8FAFC" class="mono" font-size="12" font-weight="500">Portfolio</text>
+        </g>
+      </g>
+
+      <rect x="482" y="28" width="670" height="554" fill="url(#glass-sheen)" pointer-events="none" />
+    </g>
+
+    <rect x="482" y="28" width="670" height="554" rx="18" ry="18" fill="none" stroke="url(#border-shimmer)" stroke-width="1.5" />
+    <rect width="1180" height="610" rx="24" ry="24" fill="none" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2" />
+  </g>
+</svg>
