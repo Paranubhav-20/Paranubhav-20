@@ -280,7 +280,7 @@
 
       <g transform="translate(520, 114)">
         <text x="0" y="0" fill="#94A3B8" class="mono" font-size="14" font-weight="500">Hi 👋, I'm</text>
-        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)"> Paranubhav Dash</text>
+        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)">   Paranubhav Dash</text>
       </g>
 
       <!-- Animated Roles -->
@@ -403,7 +403,7 @@
           <g class="pill" transform="translate(96, 0)">
             <rect width="86" height="30" rx="8" class="pill-bg" />
             <circle cx="16" cy="15" r="3" fill="#38BDF8" />
-            <text x="49" y="19" text-anchor="middle" class="pill-text">Docker</text>
+            <text x="49" y="19" text-anchor="middle" class="pill-text">Jupyter</text>
           </g>
           <g class="pill" transform="translate(192, 0)">
             <rect width="98" height="30" rx="8" class="pill-bg" />
@@ -413,7 +413,7 @@
           <g class="pill" transform="translate(300, 0)">
             <rect width="72" height="30" rx="8" class="pill-bg" />
             <circle cx="16" cy="15" r="3" fill="#F59E0B" />
-            <text x="42" y="19" text-anchor="middle" class="pill-text">AWS</text>
+            <text x="42" y="19" text-anchor="middle" class="pill-text">SQL</text>
           </g>
           <g class="pill" transform="translate(382, 0)">
             <rect width="82" height="30" rx="8" class="pill-bg" />
