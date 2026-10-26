@@ -280,7 +280,7 @@
 
       <g transform="translate(520, 114)">
         <text x="0" y="0" fill="#94A3B8" class="mono" font-size="14" font-weight="500">Hi 👋, I'm</text>
-        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)">Paranubhav Dash</text>
+        <text x="82" y="2" fill="url(#accent-grad)" class="sans" font-size="31" font-weight="800" letter-spacing="-0.6" filter="url(#cyber-glow)"> Paranubhav Dash</text>
       </g>
 
       <!-- Animated Roles -->
@@ -289,10 +289,10 @@
         <text x="538" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="700">~</text>
 
         <g clip-path="url(#type-clip-1)">
-          <text x="556" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="600">Frontend Engineer</text>
+          <text x="556" y="182" fill="#22D3EE" class="mono" font-size="18" font-weight="600">Data Analyst</text>
         </g>
         <g clip-path="url(#type-clip-2)">
-          <text x="556" y="182" fill="#A855F7" class="mono" font-size="18" font-weight="600">Full Stack Developer</text>
+          <text x="556" y="182" fill="#A855F7" class="mono" font-size="18" font-weight="600">Frontend Engineer</text>
         </g>
         <g clip-path="url(#type-clip-3)">
           <text x="556" y="182" fill="#10B981" class="mono" font-size="18" font-weight="600">Open Source Contributor</text>
@@ -329,7 +329,7 @@
           <text x="0" y="0" fill="#22D3EE" font-weight="600">02</text>
           <text x="28" y="0" fill="#94A3B8">Education</text>
           <text x="155" y="0" fill="#64748B">::</text>
-          <text x="180" y="0" fill="#F8FAFC" font-weight="500">Computer Science &amp; Data Engineering</text>
+          <text x="180" y="0" fill="#F8FAFC" font-weight="500">Computer Science &amp; Engineering</text>
         </g>
         <g transform="translate(520, 284)" opacity="0">
           <animate attributeName="opacity" values="0;1" begin="1.2s" dur="0.5s" fill="freeze" />
